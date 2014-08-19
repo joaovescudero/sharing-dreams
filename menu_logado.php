@@ -27,10 +27,16 @@ if (tem_post()) {
         $erros_validacao['arte'] = 'You forgot to select a picture';
     } else {
         if (tratar_arte($_FILES['arte'])) {
-            $arte = array();
-            $arte['cadastro_id'] = $cadastro_id;
-            $arte['nome'] = $_FILES['arte']['name'];
-            $arte['arquivo'] = $_FILES['arte']['name'];
+            if (isset($_POST['nome_arte']) && strlen($_POST['nome_arte']) >= 4) { 
+                $arte = array();
+                $arte['cadastro_id'] = $cadastro_id;
+                $arte['nome'] = $_FILES['arte']['name'];
+                $arte['arquivo'] = $_FILES['arte']['name'];
+                $arte['nome_arte'] = $_POST['nome_arte'];
+            } else {
+                $tem_erros = true;
+                $erros_validacao['nome_arte'] = "Ops! Art's name must have 4 characters or more!";   
+            }
         } else {
             $tem_erros = true;
             $erros_validacao['arte'] = 'Send just pictures! And height must be > 200 pixels and width > 300 pixels';

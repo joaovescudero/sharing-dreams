@@ -35,10 +35,21 @@
                     <?php endif; ?>
             </label>
             
-            <center>First, select the file:
-                <br>
+            <center>
 
                 <form action="" method="post" enctype="multipart/form-data">
+
+                    <label>
+                        <p>Type the art's name: </p>
+                        <input type='text' name='nome_arte' placeholder="Art's name">
+                    </label>
+
+                    <?php if ($tem_erros && isset($erros_validacao['nome_arte'])) : ?>
+                        <span class='erro'><?php echo $erros_validacao['nome_arte']; ?></span>
+                    <?php endif; ?>
+
+                    <br>
+                    <br>
 
                     <input type="hidden" name="cadastro_id" value="<?php echo $_SESSION['id']; ?>">
 
@@ -48,10 +59,11 @@
                         <?php endif; ?>
                     </label>
 
-                    <input type='file' name='arte'>
+                    <input type='file' name='arte' style='text-align: center;'>
 
                     <br>
                     <br>Then, you can upload if you want:
+                    <br>
                     <br>
                     <button type="submit">Let's Rock!</button>
 

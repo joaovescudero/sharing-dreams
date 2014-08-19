@@ -1,4 +1,5 @@
-body {
+
+            body {
                 width:750px;
                 margin: 0 auto;
                 color:#484848;
@@ -40,7 +41,7 @@ body {
                 color:#65b8dc;
                 text-decoration:underline;
             }
-a#menu {
+			a#menu {
                 color:#484848;
                 text-decoration:none;
             }
@@ -74,6 +75,7 @@ a#menu {
                 box-shadow: 1px 1px 2px #e6e6e6;
                 cursor: default;
                 background: #fff url(../images/bgimg.jpg) no-repeat center center;
+                margin-left:-35px;
             }
             .view .mask, .view .content {
                 width: 300px;
@@ -99,7 +101,7 @@ a#menu {
                 background: #14a4ff;
                 color: #fff;
                 width:200px;
-                height:25px;
+                height:20px;
                 border-radius:15px;
             }
             .view a.donate: hover {
@@ -173,15 +175,17 @@ a#menu {
                 margin-bottom:15px;
                 margin-left:15px;
             }
-
-.name-art {
+			
+			.name-art {
                 bottom:0;
                 margin-bottom:15px;
                 margin-left:50px;
             }
-
-.name-author {
+			
+			.name-author {
                 bottom:0;
                 margin-bottom:-5px;
                 margin-left:50px;
             }
+			
+			

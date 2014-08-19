@@ -43,12 +43,13 @@ function gravar_foto($mysqli, $foto){
 
 function gravar_arte($mysqli, $arte){
     $sqlGravar = "INSERT INTO artes
-        (cadastro_id, nome, arquivo)
+        (cadastro_id, nome, arquivo, nome_arte)
         VALUES
         (
             {$arte['cadastro_id']},
             '{$arte['nome']}',
-            '{$arte['arquivo']}'
+            '{$arte['arquivo']}',
+            '{$arte['nome_arte']}'
         )
     ";
 

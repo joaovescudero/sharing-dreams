@@ -119,7 +119,7 @@
 										<?php else : ?>
 											<img src='img/sem-foto.png' class="img-author" style="position:absolute; position:absolute; width:41px; height:41px;">
 										<?php endif; ?>
-										<p class="name-art" style="position:absolute;">"Name"</p>
+										<p class="name-art" style="position:absolute;">"<?php echo $arte_artista['nome_arte']; ?>"</p>
 										<p class="name-author" style="position:absolute;"><?php echo $nome_perfil; ?></p>
 									</div>
 								</div>
