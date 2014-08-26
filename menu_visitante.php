@@ -13,7 +13,7 @@ include "helper.php";
 
 <div class="top">
     <div class="logo">
-        <img src="img/logo.png">
+        <a href='/'><img src="img/logo.png"></a>
     </div>
     <ul>
         <li>About</li>

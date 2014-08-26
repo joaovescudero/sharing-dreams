@@ -1,12 +1,11 @@
 <div class="top">
             <div class="logo">
-                <img src="img/logo.png">
+                <a href='/'><img src="img/logo.png"></a>
             </div>
             <ul>
                 <li>About</li>
                 <li><a href="/editProfile" id="menu">Settings</a>
                 </li>
-                <li><a href="/editPass" id="menu">Settings2</a>
                 <li><a href="deslogar.php" id="menu">Logout</a>
                 </li>
 				

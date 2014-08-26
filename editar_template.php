@@ -70,6 +70,8 @@
         <center>
         	<div style="height:30px;"></div>
 
+        	<p><a href="/editPass" style='color: #428bca'>Change your password! Click here!</a></p>
+
 			<form action="" method="post" enctype="multipart/form-data">
 					<input type='hidden' name='id' value='<?php echo $cadastro['id']; ?>'>
 

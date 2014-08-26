@@ -8,6 +8,7 @@
     </head>
     
     <body>
+
         <?php
 
 			session_start();
@@ -27,9 +28,24 @@
 			}
 
 		?>
-        
-        <?php
-            include "galeria.php";
+
+        <form method="GET" action="/">
+            <label for="consulta">Search an art:</label>
+            <input type="text" id="q" name="q" maxlength="255">
+            <input type="submit" value="OK">
+        </form>
+
+        <?php 
+            if (isset($_GET['q'])) {
+                $busca = $_GET['q'];
+
+                $sql = "SELECT * FROM artes WHERE nome_arte LIKE '%".$busca."%' ORDER BY id DESC";
+                $query = mysqli_query($mysqli, $sql);
+
+                include "template_search.php";  
+            } else {
+                include "galeria.php";
+            }
         ?>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
