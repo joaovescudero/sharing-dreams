@@ -1,9 +1,10 @@
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
 
             body {
                 width:750px;
                 margin: 0 auto;
                 color:#484848;
-                font-family:'Raleway', sans-serif;
+                font-family:'Open Sans', sans-serif;
             }
             .top {
                 height:60px;
@@ -186,6 +187,37 @@
                 bottom:0;
                 margin-bottom:-5px;
                 margin-left:50px;
+            }
+
+            input#search{
+                height: 37px;
+                width: 365px;
+                background-color: #eaeaea;
+                border: 1px solid #d4d4d4;
+                font-size: 18px;
+                color: #555555;
+                font-family:'Open Sans', sans-serif;
+                padding-left:10px;
+                outline:0;
+            }
+            .search-button-after{
+                background: url('http://i.imgur.com/6W8m7Sm.png') right center no-repeat;
+            }
+            .page-button{
+                font-family:'Open Sans', sans-serif;
+                display:inline-block;
+                width:28px;
+                background-color: #eaeaea;
+                border: 1px solid #d4d4d4;
+                font-size: 18px;
+                color: #555555;
+                padding-top:8px;
+                padding-bottom:8px;
+                margin-left:3px;
+                margin-right:3px;
+            }
+            .stroke-page{
+                border-color:#969696;
             }
 			
 			
