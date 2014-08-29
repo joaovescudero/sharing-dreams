@@ -28,11 +28,11 @@
 			}
 
 		?>
-
+        <div style="height:20px;"></div>
         <form method="GET" action="/">
-            <label for="consulta">Search an art:</label>
-            <input type="text" id="q" name="q" maxlength="255">
-            <input type="submit" value="OK">
+            <center>
+                <input type="text" name="q" id="search" class="search-button-after" placeholder="Find someone to help">
+            </center>
         </form>
 
         <?php 
@@ -47,6 +47,17 @@
                 include "galeria.php";
             }
         ?>
+
+        <center>
+            <div class="page-button stroke-page">1</div>
+            <div class="page-button">2</div>
+            <div class="page-button">3</div>
+            <div class="page-button">4</div>
+            <div class="page-button">5</div>
+            <div class="page-button">6</div>
+            <div class="page-button">></div>
+        </center>
+        <div style="height:80px;"></div>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     </body>
