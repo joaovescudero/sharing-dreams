@@ -215,9 +215,14 @@
                 padding-bottom:8px;
                 margin-left:3px;
                 margin-right:3px;
+                text-align: center;
             }
             .stroke-page{
                 border-color:#969696;
+            }
+            a#num-page{
+                text-decoration: none;
+                color: #555555;
             }
 			
 			
