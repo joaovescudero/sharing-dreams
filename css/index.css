@@ -172,6 +172,25 @@
                 opacity: 1;
             }
 
+            .img-author {
+                bottom:0;
+                margin-bottom:15px;
+                margin-left:15px;
+            }
+
+            .name-art {
+                bottom:0;
+                margin-bottom:15px;
+                margin-left:50px;
+            }
+            
+            .name-author {
+                bottom:0;
+                margin-bottom:-5px;
+                margin-left:50px;
+            }
+        
+
             input#search{
                 height: 37px;
                 width: 365px;
