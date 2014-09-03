@@ -1,4 +1,4 @@
-            @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600);
 
             body {
                 width:750px;
@@ -78,116 +78,6 @@
                 background: #fff url(../images/bgimg.jpg) no-repeat center center;
                 margin-left:-35px;
             }
-            .view .mask, .view .content {
-                width: 300px;
-                height: 200px;
-                position: absolute;
-                overflow: hidden;
-                top: 0;
-                left: 0;
-            }
-            .view img {
-                display: block;
-                position: relative;
-            }
-            .view p {
-                position: relative;
-                padding: 10px 20px 20px;
-                text-align: center;
-            }
-            .view a.donate {
-                display: inline-block;
-                text-decoration: none;
-                padding: 7px 14px;
-                background: #14a4ff;
-                color: #fff;
-                width:200px;
-                height:20px;
-                border-radius:15px;
-            }
-            .view a.donate: hover {
-                -webkit-box-shadow: 0 0 5px #000;
-                -moz-box-shadow: 0 0 5px #000;
-                box-shadow: 0 0 5px #000;
-            }
-            .view-fifth img {
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-            }
-            .view-fifth .mask {
-                background-color: #eaeaea;
-                color:#484848;
-                -webkit-transform: translateX(-300px);
-                -moz-transform: translateX(-300px);
-                -o-transform: translateX(-300px);
-                -ms-transform: translateX(-300px);
-                transform: translateX(-300px);
-                -ms-filter:"progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-                filter: alpha(opacity=100);
-                opacity: 1;
-                -webkit-transition: all 0.3s ease-in-out;
-                -moz-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                -ms-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-            }
-            .view-fifth p {
-                -ms-filter:"progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-                filter: alpha(opacity=0);
-                opacity: 0;
-                color: #333;
-                -webkit-transition: all 0.2s linear;
-                -moz-transition: all 0.2s linear;
-                -o-transition: all 0.2s linear;
-                -ms-transition: all 0.2s linear;
-                transition: all 0.2s linear;
-            }
-            .view-fifth:hover .mask {
-                -webkit-transform: translateX(0px);
-                -moz-transform: translateX(0px);
-                -o-transform: translateX(0px);
-                -ms-transform: translateX(0px);
-                transform: translateX(0px);
-            }
-            .view-fifth:hover img {
-                -webkit-transform: translateX(300px);
-                -moz-transform: translateX(300px);
-                -o-transform: translateX(300px);
-                -ms-transform: translateX(300px);
-                transform: translateX(300px);
-            }
-            .view-fifth:hover .mask img {
-                -webkit-transform: translateX(0px);
-                -moz-transform: translateX(0px);
-                -o-transform: translateX(0px);
-                -ms-transform: translateX(0px);
-                transform: translateX(0px);
-            }
-            .view-fifth:hover p {
-                -ms-filter:"progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-                filter: alpha(opacity=100);
-                opacity: 1;
-            }
-            .img-author {
-                bottom:0;
-                margin-bottom:15px;
-                margin-left:15px;
-            }
-			
-			.name-art {
-                bottom:0;
-                margin-bottom:15px;
-                margin-left:50px;
-            }
-			
-			.name-author {
-                bottom:0;
-                margin-bottom:-5px;
-                margin-left:50px;
-            }
 
             input#search{
                 height: 37px;
@@ -223,6 +113,95 @@
             a#num-page{
                 text-decoration: none;
                 color: #555555;
+            }
+
+            .info_art{
+                padding-top:40px;
+                padding-left:47px;
+            }
+
+            .art_name{
+                color: black;
+                font-size: 18px;
+                display: inline;
+                margin-top: 5px;
+                margin-left: 15px;
+                position: absolute;
+            }
+
+            .author_name{
+                font-size: 18px;
+                margin-top: -35px;
+                margin-left: 79px;
+                position: absolute;
+            }
+
+            .author-image{
+                border-radius:500px;
+            }
+
+            .amount{
+                font-size:24px;
+                margin-right:20px;
+                float:right;
+                display:inline;
+                text-align:right;
+                line-height:95%;
+            }
+
+            .amount_dollar{
+                font-weight: 600;
+            }
+
+            .full_art{
+                border-radius:5px;
+                width:465px;
+                height:300px;
+                margin-top:18px;
+            }
+
+            .about_donate{
+                float:right;
+                display:inline;
+                font-size:18px;
+                width:200px;
+                margin-left:30px;
+                margin-top:10px;
+            }
+
+            .why{
+                font-weight: 600;
+                font-size:24px;
+            }
+
+            .donate_button{
+                width: 195px;
+                height: 45px;
+                background-color: #20c263;
+                border-radius: 5px;
+                padding-top: 15;
+                margin-top: 10px;
+                color: white;
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .more_of{
+                margin-left:15px;
+                font-size:18px;
+                display:inline-block;
+            }
+
+            .more_of_art{
+                width:140px;
+                height:80px;
+                -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=81)";
+                filter: alpha(opacity=81);
+                -moz-opacity: 0.81;
+                -khtml-opacity: 0.81;
+                opacity: 0.81;
+                float:left;
+                margin-left:5px;
             }
 			
 			
