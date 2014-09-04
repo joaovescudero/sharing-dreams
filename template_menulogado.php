@@ -1,4 +1,6 @@
-<div class="top">
+
+
+        <div class="top">
             <div class="logo">
                 <a href='/'><img src="img/logo.png"></a>
             </div>
@@ -24,8 +26,6 @@
         <div class="middle">
             <div class="hr"></div>
             <div class="txtg" style="margin-top:55px;">Show your talent to the world and help kids! Submit your best art! :-)
-                <br>
-                <br>
             </div>
 
             <label>
@@ -37,39 +37,55 @@
             <center>
 
                 <form action="" method="post" enctype="multipart/form-data">
-
-                    <label>
-                        <p>Type the art's name: </p>
-                        <input type='text' name='nome_arte' placeholder="Art's name">
-                    </label>
-
                     <?php if ($tem_erros && isset($erros_validacao['nome_arte'])) : ?>
                         <span class='erro'><?php echo $erros_validacao['nome_arte']; ?></span>
                     <?php endif; ?>
-
                     <br>
-                    <br>
-
                     <input type="hidden" name="cadastro_id" value="<?php echo $_SESSION['id']; ?>">
-
                     <label>
                         <?php if ($tem_erros && isset($erros_validacao['arte'])) : ?>
                             <p class="erro" style='font-weight: bold;'><?php echo $erros_validacao['arte']; ?></p>
                         <?php endif; ?>
                     </label>
-
-                    <input type='file' name='arte' style='text-align: center;'>
-
+                    <div class="img_select">
+                        Click to<br>select an art.
+                    </div>
+                    <label>
+                        <input type='text' name='nome_arte' placeholder="Art's name" class="art_name2">
+                    </label>
+                    <input id="upload_input" type="file" name='arte'/>
                     <br>
-                    <br>Then, you can upload if you want:
-                    <br>
-                    <br>
-                    <button type="submit">Let's Rock!</button>
+                    <div class="upload_button">
+                        Submit
+                    </div>
 
                 </form>
 
 
             </center>
-            <br>
             <div class="hr" style="margin-top:15px;"></div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-1.8b2.min.js"></script>
+        <script>
+        $(function(){
+                $("#upload_input").change(function(){
+                    if (this.files && this.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function (e) {
+                            // faz as paradas
+                            $('.img_select').css('background', "url("+e.target.result+") no-repeat" );
+                            $('.img_select').css('background-size', "220px 120px");
+                            $('.img_select').text("");
+                        }
+                        reader.readAsDataURL(this.files[0]);
+                    }
+                });
+         
+                $(".img_select").click(function(){
+                     $("#upload_input").trigger('click');
+                });
+        })
+         
+         
+        </script>
