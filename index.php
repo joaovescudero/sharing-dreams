@@ -5,6 +5,7 @@
         <title>Sharing Dreams</title>
         <link rel="stylesheet" href="css/index.css">
         <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     </head>
     
     <body>
