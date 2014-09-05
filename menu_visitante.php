@@ -13,9 +13,9 @@ include "helper.php";
 
 <div class="top">
     <div class="logo">
-        <a href='/'><img src="img/logo.png"></a>
+        <a href='/'><img src="img/logo.png" class="logo_img"></a>
     </div>
-    <ul>
+    <ul class="menu_list">
         <li>About</li>
         <li><a href="/join" id="menu">Join</a></li>
         <li><a href="/login" id="menu">Login</a></li>
@@ -26,7 +26,7 @@ include "helper.php";
         <div class="txtg" style="margin-top:55px;">Help kids around the world.
             <br>	<a href="#" style="font-size:18px;">About</a>
             <br>
-            <img src="img/about.png" style="margin-top:20px;">
+            <img src="img/about.png" class="about_img">
         </div>
     <div class="hr" style="margin-top:15px;"></div>
 </div>
