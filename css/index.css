@@ -358,5 +358,31 @@
                 text-align: center;
                 font-size: 18px;
             }
+
+            /* IPHONE */
+
+            @media(max-width: 359px) and (min-height:420px) {
+                body{
+                    width:355px;
+                }
+                .top{
+                    width:300px;
+                }
+                .logo_img{
+                    width:140px;
+                    margin-top:13px;
+                }
+                .menu_list{
+                    margin-left:-30px;
+                }
+                .about_img{
+                    margin-top:20px;
+                    width:290px;
+                }
+                .txtg{
+                    font-size:18px;
+                    margin-left:-45px;
+                }
+            }
 			
 			
