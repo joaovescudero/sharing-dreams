@@ -98,6 +98,14 @@ function buscar_artes($mysqli)
     return $artes;
 }
 
+function buscar_arte($mysqli, $id)
+{
+    $sqlBusca = "SELECT * FROM artes WHERE id = {$id}";
+    $resultado = mysqli_query($mysqli, $sqlBusca);
+
+    return $arte = mysqli_fetch_assoc($resultado);
+}
+
 function buscar_dados_artista($mysqli, $cadastro_id) {
     $sqlBusca = "SELECT id, usuario, nome FROM cadastro WHERE id = {$cadastro_id}";
     $resultado = $mysqli->query($sqlBusca);
@@ -107,6 +115,19 @@ function buscar_dados_artista($mysqli, $cadastro_id) {
 
 function buscar_artes_artista($mysqli, $cadastro_id){
     $sqlBusca = "SELECT * FROM artes WHERE cadastro_id = '$cadastro_id' ORDER BY id DESC";
+    $resultado = mysqli_query($mysqli, $sqlBusca);
+
+    $artes_artista = array();
+
+    while ($arte_artista = mysqli_fetch_assoc($resultado)) {
+        $artes_artista[] = $arte_artista;
+    }
+
+    return $artes_artista;
+}
+
+function buscar_artes_artista_limitadas($mysqli, $cadastro_id){
+    $sqlBusca = "SELECT * FROM artes WHERE cadastro_id = '$cadastro_id' ORDER BY id DESC LIMIT 5";
     $resultado = mysqli_query($mysqli, $sqlBusca);
 
     $artes_artista = array();

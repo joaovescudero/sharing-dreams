@@ -21,9 +21,15 @@ $cmd2 = "SELECT * FROM artes ORDER BY id DESC LIMIT $inicio, $registros ";
 $artes_pagina = mysqli_query($mysqli, $cmd2);
 $total = mysqli_num_rows($artes_pagina);
 
+$pagina_atual = (isset($_GET['page']))? $_GET['page'] : 1;
 
-for($i = 1; $i < $numPaginas + 1; $i++) {
-    echo "<a href='/?page=$i'>".$i."</a> ";
-}
+
+$max_links = 6;
+$links_laterais = ceil($max_links / 2);
+
+$inicio = $pagina_atual - $links_laterais;
+$limite = $pagina_atual + $links_laterais;
+
+
 
 include "template_galeria.php";	

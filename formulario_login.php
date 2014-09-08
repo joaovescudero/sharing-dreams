@@ -22,9 +22,9 @@
                 <a href="http://sharingdreams.url.ph"><img src="img/logo.png"></a>
             </div>
             <ul>
-                <li>About</li>
-                <li><a href="/join" id="menu">Join</a></li>
-                <li>Login</li>
+				<li>About</li>
+				<li><a href ="/join" id="menu">Join</a></li>
+				<li>Login</li>
             </ul>
         </div>
 

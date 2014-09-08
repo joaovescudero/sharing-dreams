@@ -1,12 +1,11 @@
 
 
 		<div class="gallery">
-            <div class="txtg" style="margin-top:20px;">Gallery: <?php echo $_GET['q']; ?></div>
-            <br>
+            <div class="txtg" style="margin-top:20px;">Search: <?php echo $_GET['q']; ?></div>
             <br>
             <div style="margin-left:-35px;">
             <ol style="width: 630px;">
-                <?php while ($arte = (mysqli_fetch_assoc($query))) : ?>
+                <?php while ($arte = (mysqli_fetch_assoc($artes_pagina))) : ?>
                         <?php 
                                 $artista = buscar_dados_artista($mysqli, $arte['cadastro_id']);
                                 $usuario_artista = $artista['usuario'];
@@ -43,6 +42,31 @@
                     </li>
                 <?php endwhile; ?>
                 </ol>
+
+                <center>
+                <?php
+
+                    if ($pagina_atual > 1) {
+                        echo "<div class='page-button'><a href='/?q=$busca&page=".($pagina_atual - 1)."'><<</a></div>";
+                    }
+
+                    for($i = $inicio; $i <= $limite + 1; $i++) {
+                        if ($i == $pagina_atual) {
+                            echo "<div class='page-button stroke-page'>".$pagina_atual."</div> ";
+                        } else {
+                            if ($i >= 1 && $i <= $numPaginas) {
+                                echo "<div class='page-button'><a  id='num-page' href='/?q=$busca&page=$i'>".$i."</a></div> ";
+                            }
+                        }
+                    }
+
+                    if ($pagina_atual < $numPaginas) {
+                        echo "<div class='page-button'><a href='/?q=$busca&page=".($pagina_atual + 1)."'>>></a></div>";
+                    }
+                ?>
+            </center>
+            
+            <br>
             </div>
         </div>
 

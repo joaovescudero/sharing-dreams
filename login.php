@@ -42,21 +42,21 @@ if(tem_post()){
 			$cadastros->buscar_cadastro($cadastro['usuario'], $cadastro['senha']);
 			$login = $cadastros->cadastro;
 
-			$_SESSION['usuario_logado'] = true;
-			$_SESSION['id'] = $login['id'];
-			$_SESSION['foto'] = buscar_foto($mysqli, $_SESSION['id']);
-			$_SESSION['usuario'] = $login['usuario'];
+			$_SESSION['usuario_logado']  = true;
+			$_SESSION['id']              = $login['id'];
+			$_SESSION['foto']            = buscar_foto($mysqli, $_SESSION['id']);
+			$_SESSION['usuario']         = $login['usuario'];
 			$_SESSION['data_nascimento'] = traduz_data_nascimento_para_exibir($login['data_nascimento']);
-			$_SESSION['sexo'] = traduz_sexo($login['sexo']);
-			$_SESSION['nome'] = $login['nome'];
-			$_SESSION['email'] = $login['email'];
-			$_SESSION['endereco'] = $login['endereco'];
-			$_SESSION['sobre'] = $login['sobre'];
-			$_SESSION['senha'] = $login['senha'];
+			$_SESSION['sexo']            = traduz_sexo($login['sexo']);
+			$_SESSION['nome']            = $login['nome'];
+			$_SESSION['email']           = $login['email'];
+			$_SESSION['endereco']        = $login['endereco'];
+			$_SESSION['sobre']           = $login['sobre'];
+			$_SESSION['senha']           = $login['senha'];
 
 			header('Location: http://sharingdreams.url.ph/');
 		} else {
-			$erro_login = true;
+			$erro_login                  = true;
 			$erros_validacao['invalido'] = 'Invalid username or password';
 		}
 	}
