@@ -55,9 +55,15 @@
                     </label>
                     <input id="upload_input" type="file" name='arte'/>
                     <br>
+<<<<<<< HEAD
                     <button class="upload_button">
                         Submit
                     </button>
+=======
+                    <div class="upload_button">
+                        Submit
+                    </div>
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
 
                 </form>
 

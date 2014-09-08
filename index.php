@@ -5,6 +5,7 @@
         <title>Sharing Dreams</title>
         <link rel="stylesheet" href="css/index.css">
         <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
     </head>
     
     <body>
@@ -48,6 +49,7 @@
 
 		?>
 
+<<<<<<< HEAD
         <?php if (!isset($_GET['art'])) : ?>
             <div style="height:20px;"></div>
             <form method="GET" action="/">
@@ -56,6 +58,14 @@
                 </center>
             </form>
         <?php endif; ?>
+=======
+         <div style="height:20px;"></div>
+        <form method="GET" action="/">
+            <center>
+                <input type="text" name="q" id="search" class="search-button-after" placeholder="Find someone to help">
+            </center>
+        </form>
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
 
         <?php 
             if (isset($_GET['q'])) {
@@ -68,6 +78,27 @@
                 $query = mysqli_query($mysqli, $sql);
                 $total_artes = mysqli_num_rows($query);
 
+
+                $registros = 10;
+                $numPaginas = ceil($total_artes/$registros);
+                $inicio = ($registros*$page)-$registros;
+
+                $sql2 = "SELECT * FROM artes WHERE nome_arte LIKE '%".$busca."%' ORDER BY id DESC LIMIT $inicio, $registros ";
+                $artes_pagina = mysqli_query($mysqli, $sql2);
+                $total = mysqli_num_rows($artes_pagina);
+
+                $pagina_atual = (isset($_GET['page']))? $_GET['page'] : 1;
+
+                $max_links = 6;
+                $links_laterais = ceil($max_links / 2);
+
+                $inicio = $pagina_atual - $links_laterais;
+                $limite = $pagina_atual + $links_laterais;
+
+
+                $total_artes = mysqli_num_rows($query);
+
+                $page = (isset($_GET['page']))? $_GET['page'] : 1;
 
                 $registros = 10;
                 $numPaginas = ceil($total_artes/$registros);

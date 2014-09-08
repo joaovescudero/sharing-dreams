@@ -19,6 +19,7 @@
             }(document, 'script', 'facebook-jssdk'));</script>
         <!-- OK. !-->
 
+<<<<<<< HEAD
         <div class="middle">
             <div class="hr"></div>
             <div class="info_art">
@@ -36,6 +37,31 @@
                 <div class="amount">
                     <div class="amount_dollar">
                         $0
+=======
+        <div class="top">
+            <div class="logo">
+                <a href='/'><img src="img/logo.png"></a>
+            </div>
+            <ul>
+                <li>About</li>
+                <li><a href="/join" id="menu">Join</a></li>
+                <li><a href="/login" id="menu">Login</a></li>
+            </ul>
+        </div>
+        <div class="middle">
+            <div class="hr"></div>
+            <div class="info_art">
+                <img src="https://scontent-a-mia.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10264619_629664303792552_997089171076589457_n.jpg?oh=175e13f2125f7a0f297d5c18922ecae7&oe=546697E6" width="60px" height="60px" class="author-image">
+                <div class="art_name">
+                    "Name of the Art"
+                </div>
+                <div class="author_name">
+                    by Guilherme Vieira Rizzo
+                </div>
+                <div class="amount">
+                    <div class="amount_dollar">
+                        $359
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
                     </div>
                     donated
                 </div>
@@ -44,7 +70,11 @@
          <div style="height:20px;"></div>
 
         <div class="art">
+<<<<<<< HEAD
             <img src="artes/<?php echo $arte['nome']; ?>" class="full_art">
+=======
+            <img src="http://sharingdreams.url.ph/artes/Firefox_wallpaper.png" class="full_art">
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
             <div class="about_donate">
                 <div class="why">
                     About donate
@@ -61,6 +91,7 @@
         </div>
 
         <div class="more_of">
+<<<<<<< HEAD
             <br><br>More of <?php echo $nome_artista; ?><br>
             <?php foreach ($artes_artista as $arte_artista) : ?>
                 <img src="artes/<?php echo $arte_artista['nome']; ?>" class="more_of_art">
@@ -69,6 +100,14 @@
 
         <div style="height:40px;"></div>
 
+=======
+            <br><br>More of Guilherme Vieira Rizzo<br>
+            <img src="http://sharingdreams.url.ph/artes/singed.jpg" class="more_of_art">
+            <img src="http://sharingdreams.url.ph/artes/Nidalee-Classic.jpg" class="more_of_art">
+            <img src="http://sharingdreams.url.ph/artes/Screenshot%20from%202014-07-19%2021:03:32.png" class="more_of_art">
+        </div>
+
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 
     </body>

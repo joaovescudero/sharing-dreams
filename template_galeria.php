@@ -26,7 +26,11 @@
                             <div class="mask">
                                 <center>
                                     <br>Did you like it?
+<<<<<<< HEAD
                                     <br>	<a href="/?art=<?php echo $arte['id']; ?>" style="margin-top:15px;" class="donate">
+=======
+                                    <br>	<a href="#" style="margin-top:15px;" class="donate">
+>>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
     									See more
     								</a>
                                     <div style="height:5px;"></div>
