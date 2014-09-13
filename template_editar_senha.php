@@ -9,17 +9,17 @@
 	<head>
 		<meta charset='UTF-8'>
 		<title>Edit!</title>
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/cadastro.css">
+		<link rel="stylesheet" href="http://sharingdreams.url.ph/css/bootstrap.css">
+		<link rel="stylesheet" href="http://sharingdreams.url.ph/css/index.css">
+        <link rel="stylesheet" href="http://sharingdreams.url.ph/css/cadastro.css">
         <link href='http://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
 		<script src="http://anontime.com/vunch/js/jquery.js"></script>
 		<script src="http://anontime.com/vunch/js/jquery-ui-1.10.4.custom.min.js"></script> 
 		<script src="http://anontime.com/vunch/js/jquery-ui-1.10.4.custom.js"></script> 
 		<script src="http://anontime.com/vunch/js/bootstrap.js"></script>
 		<script type="text/javascript" src="http://anontime.com/vunch/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="css/datepicker.css">
-		<script src="js/datepicker.js"></script>  
+		<link rel="stylesheet" href="http://sharingdreams.url.ph/css/datepicker.css">
+		<script src="http://sharingdreams.url.ph/js/datepicker.js"></script>  
 	</head>
 	<body>
 
@@ -45,21 +45,21 @@
 
 		<div class="top">
             <div class="logo">
-                <a href='http://sharingdreams.url.ph/'><img src="img/logo.png"></a>
+                <a href='http://sharingdreams.url.ph/'><img src="http://sharingdreams.url.ph/img/logo.png"></a>
             </div>
             <ul>
                 <li>About</li>
                 <li id="menu">Settings</li>
-                <li><a href="deslogar.php" id="menu">Logout</a>
+                <li><a href="http://sharingdreams.url.ph/deslogar.php" id="menu">Logout</a>
                 </li>
 				
 				<?php if (isset($_SESSION['foto'])) : ?>
 					<li>
-						<a href="/conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='http://sharingdreams.url.ph/fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php else : ?>
 					<li>
-						<a href="/conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="img/sem-foto.png" width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="http://sharingdreams.url.ph/img/sem-foto.png" width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php endif ?>
 				</li>
