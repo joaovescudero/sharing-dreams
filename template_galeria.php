@@ -1,4 +1,4 @@
-﻿        <div id="fb-root"></div>
+        <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -22,15 +22,15 @@
                                 ?>
                     <li align="center" style="display: inline-block; width: 300px;">
                         <div class="view view-fifth">
-                            <img src="artes/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                        <?php if(file_exists("http://sharingdreams.url.ph/artes/thumbnails/".$arte['nome'])){?>
+                            <img src="http://sharingdreams.url.ph/artes/thumbnails/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                        <?php }else{ ?>
+                            <img src="http://sharingdreams.url.ph/artes/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                        <?php } ?>
                             <div class="mask">
                                 <center>
                                     <br>Did you like it?
-<<<<<<< HEAD
-                                    <br>	<a href="/?art=<?php echo $arte['id']; ?>" style="margin-top:15px;" class="donate">
-=======
-                                    <br>	<a href="#" style="margin-top:15px;" class="donate">
->>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
+                                    <br>	<a href="http://sharingdreams.url.ph/?art=<?php echo $arte['id']; ?>" style="margin-top:15px;" class="donate">
     									See more
     								</a>
                                     <div style="height:5px;"></div>
@@ -43,10 +43,10 @@
                                 
                                     
                                 <?php if (isset($foto_artista)) : ?>    
-                                    <a href='/conta.php?user=<?php echo $usuario_artista; ?>'><img src="fotos/<?php echo $foto_artista['nome'] ?>" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
+                                    <a href='http://sharingdreams.url.ph/conta.php?user=<?php echo $usuario_artista; ?>'><img src="http://sharingdreams.url.ph/fotos/<?php echo $foto_artista['nome'] ?>" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
     							<?php else : ?>
-                                    <a href='conta.php?user=<?php echo $usuario_artista; ?>'><img src="img/sem-foto.png" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
-                                <?php endif; ?>
+                                    <a href='http://sharingdreams.url.ph/conta.php?user=<?php echo $usuario_artista; ?>'><img src="http://sharingdreams.url.ph/img/sem-foto.png" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
+                                <?php endif ?>
                                 <p class="name-art"  style="position:absolute;">"<?php echo $arte['nome_arte']; ?>"</p>
     							<a href='/conta.php?user=<?php echo $usuario_artista; ?>'><p class="name-author"  style="position:absolute;"><?php echo $nome_artista; ?></p></a>
                             </div>
@@ -62,7 +62,7 @@
                 <?php
 
                     if ($pagina_atual > 1) {
-                        echo "<div class='page-button'><a href='/?page=".($pagina_atual - 1)."'><<</a></div>";
+                        echo "<div class='page-button'><a href='http://sharingdreams.url.ph/?page=".($pagina_atual - 1)."'><<</a></div>";
                     }
 
                     for($i = $inicio; $i <= $limite + 1; $i++) {
@@ -76,7 +76,7 @@
                     }
 
                     if ($pagina_atual < $numPaginas) {
-                        echo "<div class='page-button'><a href='/?page=".($pagina_atual + 1)."'>>></a></div>";
+                        echo "<div class='page-button'><a href='http://sharingdreams.url.ph/?page=".($pagina_atual + 1)."'>>></a></div>";
                     }
                 ?>
             </center>
