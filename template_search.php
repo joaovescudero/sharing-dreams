@@ -1,7 +1,7 @@
 
 
 		<div class="gallery">
-            <div class="txtg" style="margin-top:20px;">Search: <?php echo $_GET['q']; ?></div>
+            <div class="txtg" style="margin-top:20px;">Search: <?php echo protege_busca($_GET['q']); ?></div>
             <br>
             <div style="margin-left:-35px;">
             <ol style="width: 630px;">
@@ -14,7 +14,7 @@
                                 ?>
                     <li align="center" style="display: inline-block; width: 300px;">
                         <div class="view view-fifth">
-                            <img src="artes/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                            <img src="http://sharingdreams.url.ph/artes/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
                             <div class="mask">
                                 <center>
                                     <br>Did you like it?
@@ -31,12 +31,12 @@
                                 
                                     
                                 <?php if (isset($foto_artista)) : ?>    
-                                    <a href='/conta.php?user=<?php echo $usuario_artista; ?>'><img src="fotos/<?php echo $foto_artista['nome'] ?>" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
+                                    <a href='http://sharingdreams.url.ph/conta.php?user=<?php echo $usuario_artista; ?>'><img src="http://sharingdreams.url.ph/fotos/<?php echo $foto_artista['nome'] ?>" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
                                 <?php else : ?>
-                                    <a href='conta.php?user=<?php echo $usuario_artista; ?>'><img src="img/sem-foto.png" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
+                                    <a href='http://sharingdreams.url.ph/conta.php?user=<?php echo $usuario_artista; ?>'><img src="http://sharingdreams.url.ph/img/sem-foto.png" class="img-author" style="position:absolute; width:41px; height:41px;"></a>
                                 <?php endif ?>
                                 <p class="name-art"  style="position:absolute;">"<?php echo $arte['nome_arte']; ?>"</p>
-                                <a href='/conta.php?user=<?php echo $usuario_artista; ?>'><p class="name-author"  style="position:absolute;"><?php echo $nome_artista; ?></p></a>
+                                <a href='http://sharingdreams.url.ph/conta.php?user=<?php echo $usuario_artista; ?>'><p class="name-author"  style="position:absolute;"><?php echo $nome_artista; ?></p></a>
                             </div>
                         </div>
                     </li>
@@ -47,7 +47,7 @@
                 <?php
 
                     if ($pagina_atual > 1) {
-                        echo "<div class='page-button'><a href='/?q=$busca&page=".($pagina_atual - 1)."'><<</a></div>";
+                        echo "<div class='page-button'><a href='http://sharingdreams.url.ph/?q=$busca&page=".($pagina_atual - 1)."'><<</a></div>";
                     }
 
                     for($i = $inicio; $i <= $limite + 1; $i++) {
@@ -55,13 +55,13 @@
                             echo "<div class='page-button stroke-page'>".$pagina_atual."</div> ";
                         } else {
                             if ($i >= 1 && $i <= $numPaginas) {
-                                echo "<div class='page-button'><a  id='num-page' href='/?q=$busca&page=$i'>".$i."</a></div> ";
+                                echo "<div class='page-button'><a  id='num-page' href='http://sharingdreams.url.ph/?q=$busca&page=$i'>".$i."</a></div> ";
                             }
                         }
                     }
 
                     if ($pagina_atual < $numPaginas) {
-                        echo "<div class='page-button'><a href='/?q=$busca&page=".($pagina_atual + 1)."'>>></a></div>";
+                        echo "<div class='page-button'><a href='http://sharingdreams.url.ph/?q=$busca&page=".($pagina_atual + 1)."'>>></a></div>";
                     }
                 ?>
             </center>
