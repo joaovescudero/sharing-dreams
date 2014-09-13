@@ -2,22 +2,22 @@
 
         <div class="top">
             <div class="logo">
-                <a href='/'><img src="img/logo.png"></a>
+                <a href='/'><img src="http://sharingdreams.url.ph/img/logo.png"></a>
             </div>
             <ul>
                 <li>About</li>
-                <li><a href="/editProfile" id="menu">Settings</a>
+                <li><a href="http://sharingdreams.url.ph/editProfile" id="menu">Settings</a>
                 </li>
-                <li><a href="deslogar.php" id="menu">Logout</a>
+                <li><a href="http://sharingdreams.url.ph/deslogar.php" id="menu">Logout</a>
                 </li>
 				
 				<?php if (isset($_SESSION['foto'])) : ?>
 					<li>
-						<a href="/conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='http://sharingdreams.url.ph/fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php else : ?>
 					<li>
-						<a href="/conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="img/sem-foto.png" width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="http://sharingdreams.url.ph/img/sem-foto.png" width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php endif ?>
 				</li>
@@ -55,15 +55,9 @@
                     </label>
                     <input id="upload_input" type="file" name='arte'/>
                     <br>
-<<<<<<< HEAD
                     <button class="upload_button">
                         Submit
                     </button>
-=======
-                    <div class="upload_button">
-                        Submit
-                    </div>
->>>>>>> 9b5a830a71b81205464b0f5eae604af88cecaa51
 
                 </form>
 
