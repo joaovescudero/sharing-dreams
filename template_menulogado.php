@@ -2,10 +2,10 @@
 
         <div class="top">
             <div class="logo">
-                <a href='/'><img src="http://sharingdreams.url.ph/img/logo.png"></a>
+                <a href='/'><img src="http://sharingdreams.url.ph/img/logo.png" class="logo_img"></a>
             </div>
             <ul>
-                <li>About</li>
+                <li id="about_li">About</li>
                 <li><a href="http://sharingdreams.url.ph/editProfile" id="menu">Settings</a>
                 </li>
                 <li><a href="http://sharingdreams.url.ph/deslogar.php" id="menu">Logout</a>
@@ -13,11 +13,11 @@
 				
 				<?php if (isset($_SESSION['foto'])) : ?>
 					<li>
-						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='http://sharingdreams.url.ph/fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src='http://sharingdreams.url.ph/fotos/<?php echo $_SESSION['foto']['nome']; ?>' width="50px" height="50px" class="perfil_img_menu" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php else : ?>
 					<li>
-						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="http://sharingdreams.url.ph/img/sem-foto.png" width="50px" height="50px" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
+						<a href="http://sharingdreams.url.ph//conta.php?user=<?php echo $_SESSION['usuario']; ?>"><img src="http://sharingdreams.url.ph/img/sem-foto.png" width="50px" height="50px" class="perfil_img_menu" style="-webkit-border-radius:500; -moz-border-radius: 500px; border-radius: 500px; float:right; margin-top:-20px;"></a>
 					</li>
 				<?php endif ?>
 				</li>
@@ -25,7 +25,7 @@
         </div>
         <div class="middle">
             <div class="hr"></div>
-            <div class="txtg" style="margin-top:55px;">Show your talent to the world and help kids! Submit your best art! :-)
+            <div class="txtg">Show your talent to the world and help kids! Submit your best art! :-)
             </div>
 
             <label>
