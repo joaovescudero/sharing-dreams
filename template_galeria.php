@@ -11,7 +11,6 @@
 
 <div class="gallery">
             <?php if (count($artes) > 0) : ?>
-            <div style="margin-left:-35px;">
             <ol class="gallery_ol">
                 <?php while ($arte = (mysqli_fetch_array($artes_pagina))) : ?>
                     <?php 
@@ -22,7 +21,7 @@
                                 ?>
                     <li align="center" class="art_li">
                         <div class="view view-fifth">
-                        <?php if(file_exists("http://sharingdreams.url.ph/artes/thumbnails/".$arte['nome'])){?>
+                        <?php if(file_exists("artes/thumbnails/".$arte['nome'])){?>
                             <img src="http://sharingdreams.url.ph/artes/thumbnails/<?php echo $arte['nome']; ?>" class="art_img_src"/>
                         <?php }else{ ?>
                             <img src="http://sharingdreams.url.ph/artes/<?php echo $arte['nome']; ?>" class="art_img_src"/>
@@ -54,7 +53,6 @@
                     </li>
                 <?php endwhile; ?>
                 </ol>
-            </div>
             
             <?php endif; ?>
 
