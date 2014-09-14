@@ -377,13 +377,16 @@
                     filter: alpha(opacity=100);
                     opacity: 1;
                 }
+                .gallery_ol{
+                    margin-left:-35px;
+                }
             }
 
             /* IPHONE */
 
-            @media(max-width: 359px) and (min-height:420px) {
+            @media(max-width: 329px){
                 body{
-                    max-width:355px;
+                    max-width:329px;
                     overflow-x:hidden;
                 }
                 .top{
@@ -396,14 +399,20 @@
                 .menu_list{
                     margin-left:-30px;
                 }
+                .perfil_img_menu{
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
                 .about_img{
                     margin-top:20px;
                     width:290px;
+                    margin-left:-20px;
                 }
                 .txtg{
                     font-size:18px;
-                    margin-left:-45px;
                     margin-top:25px;
+                    max-width:315px;
                 }
                 input#search{
                     width:270px;
@@ -412,6 +421,7 @@
                 .gallery_ol, .gallery{
                     width:330px;
                     margin-top:-20px;
+                    margin-left:-11px;
                 }
                 .art_li{
                     width:140px;
@@ -430,7 +440,143 @@
                 .pages_box{
                     position:absolute;
                     margin-top:20px;
-                    margin-left:40px;
+                    margin-left:70px;
+                }
+                .img_select{
+                    width:195px;
+                    height:80px;
+                    padding-top:35px;
+                }
+                .art_name2{
+                    width:200px;
+                    margin-top:-10px;
+                    margin-left:-98px;
+                }
+                .upload_button{
+                    width:95px;
+                    height:35px;
+                }
+                #about_li{
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
+            }
+
+            /* UM POUCO MAIOR QUE IPHONE */
+
+            @media(min-width: 330px) and (max-width:389px) {
+                body{
+                    max-width:330px;
+                    overflow-x:hidden;
+                    margin:0 auto;
+                }
+                .top{
+                    width:310px;
+                }
+                .logo_img{
+                    width:150px;
+                    margin-top:13px;
+                }
+                .about_img{
+                    margin-top:20px;
+                    width:290px;
+                }
+                .perfil_img_menu{
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
+                .txtg{
+                    font-size:18px;
+                    margin-top:25px;
+                }
+                input#search{
+                    width:285px;
+                }
+                .gallery_ol, .gallery{
+                    width:330px;
+                    margin-left:-10px;
+                }
+                .art_li{
+                    width:150px;
+                    height:100px;
+                    display:inline-block;
+                }
+                .art_img_src{
+                    width:150px;
+                    height:100px;
+                }
+                .view .mask, .view .content {
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
+                .pages_box{
+                    position:absolute;
+                    margin-top:20px;
+                    margin-left:70px;
+                }
+                #about_li{
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
+            }
+
+
+            /* MAIORIA */
+
+            @media(min-width: 390px) and (max-width:500px) {
+                body{
+                    max-width:390px;
+                    overflow-x:hidden;
+                    margin:0 auto;
+                }
+                .top{
+                    width:380px;
+                }
+                .logo_img{
+                    width:170px;
+                    margin-top:7px;
+                }
+                .about_img{
+                    margin-top:20px;
+                    width:290px;
+                }
+                .txtg{
+                    font-size:18px;
+                    margin-top:25px;
+                }
+                input#search{
+                    width:340px;
+                }
+                .gallery_ol, .gallery{
+                    width:370px;
+                }
+                .art_li{
+                    width:160px;
+                    height:110px;
+                    display:inline-block;
+                }
+                .art_img_src{
+                    width:160px;
+                    height:110px;
+                }
+                .view .mask, .view .content {
+                    width:0;
+                    height:0;
+                    opacity:0;
+                }
+                .pages_box{
+                    position:absolute;
+                    margin-top:20px;
+                    margin-left:100px;
+                }
+                #about_li{
+                    width:0;
+                    height:0;
+                    opacity:0;
                 }
             }
 			
