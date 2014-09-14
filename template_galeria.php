@@ -12,7 +12,7 @@
 <div class="gallery">
             <?php if (count($artes) > 0) : ?>
             <div style="margin-left:-35px;">
-            <ol style="width: 630px;">
+            <ol class="gallery_ol">
                 <?php while ($arte = (mysqli_fetch_array($artes_pagina))) : ?>
                     <?php 
                                 $artista = buscar_dados_artista($mysqli, $arte['cadastro_id']);
@@ -20,12 +20,12 @@
                                 $nome_artista = $artista['nome'];
                                 $foto_artista = buscar_foto($mysqli, $arte['cadastro_id']);
                                 ?>
-                    <li align="center" style="display: inline-block; width: 300px;">
+                    <li align="center" class="art_li">
                         <div class="view view-fifth">
                         <?php if(file_exists("http://sharingdreams.url.ph/artes/thumbnails/".$arte['nome'])){?>
-                            <img src="http://sharingdreams.url.ph/artes/thumbnails/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                            <img src="http://sharingdreams.url.ph/artes/thumbnails/<?php echo $arte['nome']; ?>" class="art_img_src"/>
                         <?php }else{ ?>
-                            <img src="http://sharingdreams.url.ph/artes/<?php echo $arte['nome']; ?>" style="width:300px; height: 200px;"/>
+                            <img src="http://sharingdreams.url.ph/artes/<?php echo $arte['nome']; ?>" class="art_img_src"/>
                         <?php } ?>
                             <div class="mask">
                                 <center>
@@ -58,7 +58,7 @@
             
             <?php endif; ?>
 
-            <center>
+            <center class="pages_box">
                 <?php
 
                     if ($pagina_atual > 1) {
