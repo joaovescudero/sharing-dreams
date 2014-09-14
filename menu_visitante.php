@@ -23,7 +23,7 @@ include "helper.php";
 </div>
 <div class="middle">
     <div class="hr"></div>
-        <div class="txtg" style="margin-top:55px;">Help kids around the world.
+        <div class="txtg">Help kids around the world.
             <br>	<a href="#" style="font-size:18px;">About</a>
             <br>
             <img src="http://sharingdreams.url.ph/img/about.png" class="about_img">
